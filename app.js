@@ -15,9 +15,15 @@ function addTodo() {
 
     li.appendChild(createli)
 
-     
+      // create edit button
+    var editBtn = document.createElement("i");
+    editBtn.setAttribute("class","fas fa-edit container d-flex justify-content-center");
+    var editText = document.createTextNode("EDIT")
+    editBtn.appendChild(editText)
+    editBtn.setAttribute("onclick", "editItem(this)")
 
     list.appendChild(li)
+    li.appendChild(editBtn)
 
     todo_item.value = ""
 }
